@@ -40,6 +40,10 @@ zvx 是一个基于 **Vue.js 3** 和 **Go** 构建的现代化 Kubernetes 容器
 - **路由**: Gin Router
 
 - **默认密码**: admin admin123
+```
+密码修改：./login passwd 
+
+```
 
 ## 项目结构
 
