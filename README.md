@@ -107,16 +107,6 @@ cd zvx
    ```bash
    cd zvx_go
    ./deploy.sh
-   ```
-   
-   然后手动启动容器（需要 kubeconfig 配置）：
-   ```bash
-   docker run -d \
-     --name zvx_backend \
-     --network host \
-     -v /root/.kube/config:/root/.kube/config:ro \
-     zvx_backend:latest
-   ```
 
    **方式 2: 前端 Docker 部署**
    
