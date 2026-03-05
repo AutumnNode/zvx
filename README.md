@@ -107,6 +107,7 @@ cd zvx
    ```bash
    cd zvx_go
    ./deploy.sh
+   ```
 
    **方式 2: 前端 Docker 部署**
    
