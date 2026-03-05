@@ -99,44 +99,53 @@ git clone https://github.com/AutumnNode/zvx.git
 cd zvx
 ```
 
-2. **启动服务**
-```bash
-# 方式 1: 使用 Docker Compose
-docker-compose up -d
+2. **部署方式**
 
-# 方式 2: 分别启动前端和后端
-cd zvx_web && npm install && npm run dev
-cd zvx_go && go mod tidy && go run main.go
-```
+   **方式 1: 后端 Docker 部署**
+   
+   首先运行后端部署脚本构建镜像：
+   ```bash
+   cd zvx_go
+   ./deploy.sh
+   ```
+   
+   然后手动启动容器（需要 kubeconfig 配置）：
+   ```bash
+   docker run -d \
+     --name zvx_backend \
+     --network host \
+     -v /root/.kube/config:/root/.kube/config:ro \
+     zvx_backend:latest
+   ```
+
+   **方式 2: 前端 Docker 部署**
+   
+   构建并启动前端服务：
+   ```bash
+   cd zvx_web
+   docker build -t zvx-frontend .
+   docker run -d \
+     -p 5173:5173 \
+     -p 8080:8080 \
+     zvx-frontend
+   ```
+
+   **方式 3: 本地开发部署**
+   
+   分别启动前端和后端：
+   ```bash
+   # 启动后端
+   cd zvx_go
+   go mod tidy && go run main.go &
+
+   # 启动前端
+   cd ../zvx_web
+   npm install && npm run dev
+   ```
 
 3. **访问应用**
-- 前端界面: http://localhost:3000
-- 后端 API: http://localhost:8081
-
-### Docker 部署
-
-```bash
-docker-compose up -d
-```
-
-### 手动部署
-
-1. **构建并启动后端**
-```bash
-cd zvx_go
-docker build -t zvx-go-api .
-docker run -d \
-  -p 8081:8081 \
-  -v ${KUBECONFIG_PATH}:/kubeconfig:ro \
-  zvx-go-api
-```
-
-2. **启动前端**
-```bash
-cd zvx_web
-npm install
-npm run dev
-```
+   - 前端界面：http://localhost:5173
+   - 后端 API：http://localhost:8081
 
 ## API 文档
 
