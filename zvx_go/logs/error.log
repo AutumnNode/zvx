@@ -1,0 +1,14 @@
+2025/12/06 06:14:42 logger.go:65: [ERROR] [2025-12-06 06:14:42] HTTP服务启动失败: listen tcp :8081: bind: address already in use
+2025/12/06 06:37:43 logger.go:65: [ERROR] [2025-12-06 06:37:43] ForceDeletePod error: failed to get pod uptime-kuma-037096-deployment-df9f48bf4-4k5xc: pods "uptime-kuma-037096-deployment-df9f48bf4-4k5xc" not found
+2025/12/08 09:15:05 logger.go:65: [ERROR] [2025-12-08 09:15:05] ForceDeletePod error: failed to get pod uptime-kuma-392351-deployment-686b744d9d-27xd2: pods "uptime-kuma-392351-deployment-686b744d9d-27xd2" not found
+2025/12/08 09:15:32 logger.go:65: [ERROR] [2025-12-08 09:15:32] Failed to create namespace 'uptime-kuma': namespaces "uptime-kuma" already exists
+2025/12/08 09:15:35 logger.go:65: [ERROR] [2025-12-08 09:15:35] Failed to create namespace 'uptime-kuma': namespaces "uptime-kuma" already exists
+2025/12/08 09:15:36 logger.go:65: [ERROR] [2025-12-08 09:15:36] Failed to create namespace 'uptime-kuma': namespaces "uptime-kuma" already exists
+2025/12/08 09:15:36 logger.go:65: [ERROR] [2025-12-08 09:15:36] Failed to create namespace 'uptime-kuma': namespaces "uptime-kuma" already exists
+2025/12/08 09:15:38 logger.go:65: [ERROR] [2025-12-08 09:15:38] Failed to create namespace 'uptime-kuma': namespaces "uptime-kuma" already exists
+2025/12/08 09:15:38 logger.go:65: [ERROR] [2025-12-08 09:15:38] Failed to create namespace 'uptime-kuma': namespaces "uptime-kuma" already exists
+2025/12/08 09:17:03 logger.go:65: [ERROR] [2025-12-08 09:17:03] ForceDeletePod error: failed to get pod uptime-kuma-390024-deployment-688578c7db-29z7l: pods "uptime-kuma-390024-deployment-688578c7db-29z7l" not found
+2025/12/08 09:35:41 logger.go:65: [ERROR] [2025-12-08 09:35:41] Failed to create namespace 'uptime-kuma': namespaces "uptime-kuma" already exists
+2025/12/08 09:35:42 logger.go:65: [ERROR] [2025-12-08 09:35:42] Failed to create namespace 'uptime-kuma': namespaces "uptime-kuma" already exists
+2025/12/08 10:04:33 logger.go:65: [ERROR] [2025-12-08 10:04:33] ForceDeletePod error: failed to get pod gemini-balance-065214-deployment-d8b898fcb-86q6m: pods "gemini-balance-065214-deployment-d8b898fcb-86q6m" not found
+2025/12/09 10:40:00 logger.go:65: [ERROR] [2025-12-09 10:40:00] Failed to open log stream for pod 'uptime-kuma-477619-deployment-764dcc85c8-8pt8k': container "uptime-kuma-477619" in pod "uptime-kuma-477619-deployment-764dcc85c8-8pt8k" is waiting to start: trying and failing to pull image

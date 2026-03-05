@@ -1,0 +1,58 @@
+2025/11/15 11:37:59 从当前目录加载配置文件: config
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /pods                     --> kube-api/controller.ListPods (4 handlers)
+[GIN-debug] GET    /api/namespaces           --> kube-api/controller.ListNamespaces (4 handlers)
+[GIN-debug] POST   /api/namespaces           --> kube-api/controller.CreateNamespace (4 handlers)
+[GIN-debug] GET    /pods/:name               --> kube-api/controller.GetPod (4 handlers)
+[GIN-debug] DELETE /pods/:name               --> kube-api/controller.DeletePodByQuery (4 handlers)
+[GIN-debug] DELETE /pods/:name/force         --> kube-api/controller.ForceDeletePodByQuery (4 handlers)
+[GIN-debug] POST   /pods/:name/restart       --> kube-api/controller.RestartPodByQuery (4 handlers)
+[GIN-debug] DELETE /pod/:namespace/:name     --> kube-api/controller.DeletePod (4 handlers)
+[GIN-debug] POST   /pod/:namespace/:name/restart --> kube-api/controller.RestartPod (4 handlers)
+[GIN-debug] GET    /logs/:namespace/:pod     --> kube-api/controller.GetPodLogsHandler (4 handlers)
+[GIN-debug] GET    /pods/:name/logs          --> kube-api/controller.GetPodLogsByQuery (4 handlers)
+[GIN-debug] GET    /pods/shell               --> kube-api/controller.PodShellWS (4 handlers)
+[GIN-debug] GET    /pods/watch               --> kube-api/controller.WatchPods (4 handlers)
+[GIN-debug] GET    /pods/watch/ws            --> kube-api/controller.WatchPodsWS (4 handlers)
+[GIN-debug] GET    /nodes/ips                --> kube-api/controller.ListNodeIPs (4 handlers)
+[GIN-debug] GET    /api/usage                --> kube-api/controller.GetNodeUsageHandler (4 handlers)
+[GIN-debug] POST   /api/deploy               --> kube-api/controller.DeployImageHandler (4 handlers)
+[GIN-debug] GET    /storage/pv               --> kube-api/controller.GetPersistentVolumes (4 handlers)
+[GIN-debug] POST   /storage/pv               --> kube-api/controller.CreatePersistentVolume (4 handlers)
+[GIN-debug] GET    /storage/pv/available     --> kube-api/controller.GetAvailablePersistentVolumes (4 handlers)
+[GIN-debug] GET    /storage/pv/:name         --> kube-api/controller.GetPersistentVolume (4 handlers)
+[GIN-debug] PUT    /storage/pv/:name         --> kube-api/controller.UpdatePersistentVolume (4 handlers)
+[GIN-debug] DELETE /storage/pv/:name         --> kube-api/controller.DeletePersistentVolume (4 handlers)
+[GIN-debug] DELETE /storage/pv/:name/force   --> kube-api/controller.ForceDeletePersistentVolume (4 handlers)
+[GIN-debug] GET    /network/watch            --> kube-api/controller.WatchNetwork (4 handlers)
+[GIN-debug] GET    /services                 --> kube-api/controller.ListK8sServices (4 handlers)
+[GIN-debug] POST   /services/:namespace      --> kube-api/controller.CreateK8sService (4 handlers)
+[GIN-debug] PUT    /services/:namespace/:name --> kube-api/controller.UpdateK8sService (4 handlers)
+[GIN-debug] DELETE /services/:namespace/:name --> kube-api/controller.DeleteK8sService (4 handlers)
+[GIN-debug] GET    /network/portip           --> kube-api/controller.ListPortIpRules (4 handlers)
+[GIN-debug] POST   /network/portip           --> kube-api/controller.CreatePortIpRule (4 handlers)
+[GIN-debug] PUT    /network/portip/:id       --> kube-api/controller.UpdatePortIpRule (4 handlers)
+[GIN-debug] DELETE /network/portip/:id       --> kube-api/controller.DeletePortIpRule (4 handlers)
+[GIN-debug] GET    /api/control-node-ip      --> kube-api/controller.GetControlNodeIP (4 handlers)
+[GIN-debug] POST   /api/terminal-auth        --> kube-api/controller.TerminalAuth (4 handlers)
+[GIN-debug] GET    /control-node-ip          --> kube-api/controller.GetControlNodeIP (4 handlers)
+[GIN-debug] POST   /terminal-auth            --> kube-api/controller.TerminalAuth (4 handlers)
+[GIN-debug] GET    /terminal                 --> kube-api/controller.TerminalWS (4 handlers)
+[GIN-debug] GET    /api/version-control/projects --> kube-api/controller.ListVersionControlProjects (4 handlers)
+[GIN-debug] GET    /api/version-control/projects/:projectName/versions --> kube-api/controller.GetProjectVersions (4 handlers)
+[GIN-debug] POST   /api/version-control/projects/:projectId/rollback --> kube-api/controller.RollbackVersion (4 handlers)
+[GIN-debug] DELETE /api/version-control/projects/:projectId --> kube-api/controller.DeleteProject (4 handlers)
+[GIN-debug] POST   /api/version-control/versions --> kube-api/controller.CreateVersion (4 handlers)
+[GIN-debug] POST   /api/version-control/deploy --> kube-api/controller.DeployVersion (4 handlers)
+[GIN-debug] DELETE /api/version-control/versions/:projectName/:version --> kube-api/controller.DeleteVersion (4 handlers)
+[GIN-debug] GET    /api/alerts               --> kube-api/controller.GetAlerts (4 handlers)
+[GIN-debug] DELETE /api/alerts               --> kube-api/controller.ClearAllAlerts (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8081
+[GIN-debug] [ERROR] listen tcp :8081: bind: address already in use
